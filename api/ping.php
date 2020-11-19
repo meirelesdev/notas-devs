@@ -5,4 +5,4 @@ $array['result'] = [
         ];
 
 
-require('../return.php');
+require('return.php');
