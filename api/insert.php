@@ -1,14 +1,15 @@
 <?php
-require('../config.php');
-
-$method = strtolower($_SERVER['REQUEST_METHOD']);
 
 if($method === 'post' ) {
+    
+    $conteudo = [];
+    $conteudo = json_decode(file_get_contents('php://input'), true);
 
-    $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS);
-    $body = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_SPECIAL_CHARS);
-
+    $title = $conteudo['title'];
+    $body = $conteudo['body'];
+    
     if($title && $body){    
+        
         $sql = $pdo->prepare("INSERT INTO notes (title, body) VALUES(:title, :body)");
         
         $sql->bindValue(':title', $title);

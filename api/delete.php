@@ -1,14 +1,6 @@
 <?php
-require('../config.php');
-
-$method = strtolower($_SERVER['REQUEST_METHOD']);
-
 if($method === 'delete' ) {
-
-    parse_str(file_get_contents('php://input'), $input);
-    // $id = (!empty($input['id'])) ? $input['id'] : null; 
-    $id = $input['id'] ?? null;
-    $id = filter_var($id);
+    $id = $_GET['id'];
 
     if($id){
 

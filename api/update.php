@@ -1,19 +1,14 @@
 <?php
-require('../config.php');
-
-$method = strtolower($_SERVER['REQUEST_METHOD']);
 
 if($method === 'put' ) {
+    
+   
+    $id = filter_input(INPUT_GET, 'id');
+    $conteudo = [];
+    $conteudo = json_decode(file_get_contents('php://input'), true);
 
-    parse_str(file_get_contents('php://input'), $input);
-    // $id = (!empty($input['id'])) ? $input['id'] : null; 
-    $id = $input['id'] ?? null;
-    $title = $input['title'] ?? null;
-    $body = $input['body'] ?? null;
-
-    $id = filter_var($id);
-    $title = filter_var($title);
-    $body = filter_var($body);
+    $title = $conteudo['title'];
+    $body = $conteudo['body'];
 
     if($id && $title && $body){
 
@@ -22,7 +17,8 @@ if($method === 'put' ) {
         $sql->execute();
 
         if($sql->rowCount() > 0){
-        
+            $nota = $sql->fetch(PDO::FETCH_ASSOC);
+            
             $sql = $pdo->prepare("UPDATE notes SET title = :title, body = :body WHERE id = :id");
             
             $sql->bindValue(':id', $id);

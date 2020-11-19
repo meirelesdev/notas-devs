@@ -1,7 +1,5 @@
 <?php
-require('../config.php');
 
-$method = strtolower($_SERVER['REQUEST_METHOD']);
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
 if($method === 'get' ) {
