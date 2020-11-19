@@ -1,6 +1,7 @@
 <?php
 require('../config.php');
 
+
 $method = strtolower($_SERVER['REQUEST_METHOD']);
 if (isset($_GET['url']) && !empty($_GET['url'])) {
     $url = $_GET['url'];
