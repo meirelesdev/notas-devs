@@ -8,9 +8,7 @@ $db_pass = 'e736a404';
 
 $pdo = new PDO("mysql:dbname=$db_name;host=$db_host;port=$db_port", $db_user, $db_pass);
 
-header("Access-Control-Allow-Origin: * ");
-header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
-header("Content-Type: application/json");
+
 
 $array = [
     "error" => "",
