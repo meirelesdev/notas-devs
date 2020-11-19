@@ -25,6 +25,9 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
         case 'exibir':
             require "get.php";
             break;
+        case 'ping':
+            require "ping.php";
+            break;
     }
 } else {
     // ok
