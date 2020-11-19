@@ -10,8 +10,5 @@ $pdo = new PDO("mysql:dbname=$db_name;host=$db_host;port=$db_port", $db_user, $d
 
 
 
-$array = [
-    "error" => "",
-    "result" => []
-    ];
+
 ?>

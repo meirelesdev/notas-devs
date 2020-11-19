@@ -1,6 +1,9 @@
 <?php
 require('../config.php');
-
+$array = [
+    "error" => "",
+    "result" => []
+    ];
 
 $method = strtolower($_SERVER['REQUEST_METHOD']);
 if (isset($_GET['url']) && !empty($_GET['url'])) {
