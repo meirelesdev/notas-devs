@@ -3,6 +3,7 @@ require('config.php');
 
 $array = [
     "error" => "",
+    "sucesso" => "",
     "result" => []
     ];
 

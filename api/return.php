@@ -7,6 +7,6 @@ header('Content-Type: application/json');
 header('HTTP/1.1 200');
 
 echo json_encode($array);
-die();
+exit;
 
 
