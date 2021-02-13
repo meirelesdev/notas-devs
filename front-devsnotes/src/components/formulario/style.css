@@ -1,0 +1,10 @@
+form{
+    display: flex;
+    max-width: 80%;    
+    min-height: 70%;
+    padding: 2%;
+    margin: 0 auto;
+}
+form input{
+    width: 80%;
+}

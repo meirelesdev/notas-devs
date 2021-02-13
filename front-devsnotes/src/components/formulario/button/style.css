@@ -1,0 +1,28 @@
+button{
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 2px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-add{
+    background-color: rgb(98, 181, 98);
+    border: none;
+    box-shadow: 5px -1px 5px black;
+}
+.btn-del{
+    background-color: rgb(237, 117, 117);
+    border: none;
+    box-shadow: 5px -1px 5px black;
+}
+.btn-edit{
+    background-color: rgba(19, 19, 239, 0.797);
+    border: none;
+    box-shadow: 5px -1px 5px black;
+}
+.btn-add:active, .btn-del:active, .btn-edit:active {
+    box-shadow: none;
+    background-color: #ccc;
+}
