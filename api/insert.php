@@ -1,5 +1,5 @@
 <?php
-
+header("access-control-allow-origin: * ");
 if($method === 'post' ) {
     
     $conteudo = [];
@@ -7,7 +7,7 @@ if($method === 'post' ) {
 
     $title = $conteudo['title'];
     $body = $conteudo['body'];
-    
+  
     if($title && $body){    
         
         $sql = $pdo->prepare("INSERT INTO notes (title, body) VALUES(:title, :body)");

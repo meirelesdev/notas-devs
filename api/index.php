@@ -8,8 +8,10 @@ $array = [
     ];
 
 $method = strtolower($_SERVER['REQUEST_METHOD']);
+
 if (isset($_GET['url']) && !empty($_GET['url'])) {
     $url = $_GET['url'];
+    
     switch ($url) {
 
         case 'cadastrar':            
@@ -20,11 +22,11 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
             require "getall.php";
         break;
 
-        case 'deletar':
+        case 'deletar/':
             require "delete.php";
         break;
 
-        case 'atualizar':
+        case 'atualizar/':
             require "update.php";
         break;
 

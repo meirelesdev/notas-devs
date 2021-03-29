@@ -1,9 +1,7 @@
 <?php
 
-
 if($method === 'delete' ) {
     $id = $_GET['id'];
-
     if($id){
 
         $sql = $pdo->prepare("SELECT * FROM notes WHERE id = :id");

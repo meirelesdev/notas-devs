@@ -1,22 +1,20 @@
-import style from './style.css'
+import { Link } from 'react-router-dom'
+import './style.css'
 
 const Header = (props)=>{
     return (
         <header>
             <div>
-                <h1>{props.title || 'DevsNotes'}</h1>
+                <h1><Link to="/">{props.title || 'DevsNotes'}</Link></h1>
             </div>
             <nav className="menu">
                 <ul>
                     <li>
-                        Lista
+                        <Link to="/todos"> Tarefas</Link>
                     </li>
                     
                     <li>
-                        Lista
-                    </li>
-                    <li>
-                        Lista
+                        <Link to="/about">Sobre</Link>
                     </li>
                 </ul>
             </nav>

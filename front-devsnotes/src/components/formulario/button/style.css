@@ -2,9 +2,10 @@ button{
     outline: none;
     border-radius: 5px;
     padding: 10px;
-    margin: 2px;
+    margin: 5px;
     color: white;
     cursor: pointer;
+    max-height: 40px;
 }
 
 .btn-add{
@@ -25,4 +26,16 @@ button{
 .btn-add:active, .btn-del:active, .btn-edit:active {
     box-shadow: none;
     background-color: #ccc;
+}
+.table{
+    border: 1px solid black;
+    margin: 0 auto;
+    width: 100%;
+}
+.table thead{
+    padding: 10px;
+    text-transform: uppercase;
+}
+.table thead tr th{
+    
 }
